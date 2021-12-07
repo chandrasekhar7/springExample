@@ -16,10 +16,5 @@ pipeline {
         sh 'mvn package'
       }
     }
-    stage('report') {
-      steps {
-        cucumber fileIncludePattern: '**/*.json', sortingMethod: 'ALPHABETICAL'
-      }
-    }
   }
 }
